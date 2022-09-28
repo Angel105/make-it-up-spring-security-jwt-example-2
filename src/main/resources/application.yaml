@@ -1,0 +1,26 @@
+server:
+  port: 9192
+
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/jwt-security-example-db-2
+    password: Brasschaat220204
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  config:
+    activate:
+      on-profile: dev
+welcome:
+  message: Welcome to Make-it-Up!!
+
+
